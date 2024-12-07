@@ -1,70 +1,52 @@
 
-document.addEventListener("DOMContentLoaded", ()=> {
-    
+document.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem("DarkMode") === "True") {
-        localStorage.setItem("DarkMode","True")
+        setDarkMode(true);
+    } else if (localStorage.getItem("DarkMode") === "False") {
+        setDarkMode(false);
+    }
+
+    if (localStorage.getItem("UserName")) {
+        console.log("Device is logged in!");
+    } else {
+        location.href = "../index.html";
+    }
+
+    document.getElementById("greetings").innerHTML = `Hello ${localStorage.getItem("UserName")}, How are you today? The Hall of Free-Movies! Download as MUCH as you WANT, It's free! 99.999% ADS free!`;
+});
+
+function setDarkMode(isDark) {
+    if (isDark) {
+        localStorage.setItem("DarkMode", "True");
         document.body.style.color = "white";
         document.body.style.backgroundColor = "rgb(70, 63, 63)";
-        document.querySelectorAll("dialog").forEach(dialog => {
-            dialog.style.backgroundColor = "rgb(70, 63, 63)";
-        });
-        let dialogs = document.getElementsByClassName("dialog");
-    for (let dialog of dialogs) {
-        dialog.style.color = "white";
-
-    }
-    }
-    else if (localStorage.getItem("DarkMode") === "False") {
-        localStorage.setItem("DarkMode","False")
+        updateDialogs("white", "rgb(70, 63, 63)");
+    } else {
+        localStorage.setItem("DarkMode", "False");
         document.body.style.color = "black";
         document.body.style.backgroundColor = "white";
-        document.querySelectorAll("dialog").forEach(dialog => {
-            dialog.style.backgroundColor = "white";
-        });
-        let dialogs = document.getElementsByClassName("dialog");
+        updateDialogs("black", "white");
+    }
+}
+
+function updateDialogs(textColor, backgroundColor) {
+    document.querySelectorAll("dialog").forEach(dialog => {
+        dialog.style.backgroundColor = backgroundColor;
+    });
+    let dialogs = document.getElementsByClassName("dialog");
     for (let dialog of dialogs) {
-        dialog.style.color = "black";
+        dialog.style.color = textColor;
     }
-    }
-    
-    if (localStorage.getItem("UserName")) {
-        console.log("device is logged !")
-    }
-    else {
-        location.href = "../index.html"
-    }
-    document.getElementById("greetings").innerHTML = `Hello ${localStorage.getItem("UserName")}, How are You today ?`
-})
+}
 
 function darkMode() {
-
     if (localStorage.getItem("DarkMode") === "True") {
-        
-        localStorage.setItem("DarkMode","False")
-        document.body.style.color = "black";
-        document.body.style.backgroundColor = "white";
-        document.querySelectorAll("dialog").forEach(dialog => {
-            dialog.style.backgroundColor = "white";
-        });
-        let dialogs = document.getElementsByClassName("dialog");
-    for (let dialog of dialogs) {
-        dialog.style.color = "black";
+        setDarkMode(false);
+    } else {
+        setDarkMode(true);
     }
+}
 
-    }else {
-
-        localStorage.setItem("DarkMode","True")
-        document.body.style.color = "white";
-        document.body.style.backgroundColor = "rgb(70, 63, 63)";
-        document.querySelectorAll("dialog").forEach(dialog => {
-            dialog.style.backgroundColor = "rgb(70, 63, 63)";
-        });
-        let dialogs = document.getElementsByClassName("dialog");
-    for (let dialog of dialogs) {
-        dialog.style.color = "white";
-
-    }
-    }
 
         
 
