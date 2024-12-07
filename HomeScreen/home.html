@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bolder;">
+<head>
+    <link rel="stylesheet" href="../certain Css/dialog.css">
+    <link rel="stylesheet" href="./Home.css">
+    <script src="./Home.js"></script>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/619/619044.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrunchyCrack | Home</title>
+</head>
+<body id="body">
+    <img src="https://cdn-icons-png.flaticon.com/512/7175/7175356.png" alt="menu" height="30px" onclick="Menu.showModal()"> <br> You can Switch Light-Modes Here !
+    <p style="text-align: center;">
+        <img class="logo" src="https://cdn-icons-png.flaticon.com/128/619/619044.png" alt="logo" height="150px">
+        <br>
+        <br>
+        <p style="text-align:center; font-size: xx-large;" class="greeting" id="greetings">
+            Hello !
+        </p>
+    </p>
+    <p style="text-align: center;">
+        <div class="container">
+            <p style="text-align: center; background-color: rgb(117, 114, 114);" class="cover" >
+                <img alt="SR" height="220px" onclick="SR.showModal()" src="../Images/ShawshankRedemptionMoviePoster.jpg" >
+                <br>
+                
+                The Shawshank Redemption
+            </p>
+        </div>
+    </p>
+    <p style="text-align: center;" class="void">
+        You Have Reached the point of Void ! <br>
+        Yes, its pretty sad :( but im only One Dev, trying to give the best possible ! 
+        <br> ---Ahmed Moumin Isamel---
+    </p>
+    <dialog id="Menu" class="dialog">
+        <button class="btn" style="background-color: red;" onclick="Menu.close()">Exit</button>
+        <br>
+        <br>
+        <br>
+        <a href="./Info/Info.html">
+            <button class="btn"> Info </button>
+        </a>
+        <br>
+        <br>
+        <button class="btn" onclick="darkMode()">DarkMode ?</button>
+        <br>
+        <br>
+        More Options will be added in the future.
+    </dialog>
+    <dialog class="dialog" id="SR">
+        <button class="btn" style="background-color: red;" onclick="SR.close()">Exit</button>
+        <br>
+        The Shawshank Redemption
+        <br>
+        <p style="text-align: center; font-size: xx-large;">
+            IMDb rating : 9.3/10 ! Incredible
+        </p>
+        
+            <br>
+            The Shawshank Redemption is a 1994 American prison drama film written and directed by Frank Darabont, based on the 1982 Stephen King novella Rita Hayworth and Shawshank Redemption. The film tells the story of banker Andy Dufresne (Tim Robbins), who is sentenced to life in Shawshank State Penitentiary for the murders of his wife and her lover, despite his claims of innocence. Over the following two decades, he befriends a fellow prisoner, contraband smuggler Ellis "Red" Redding (Morgan Freeman), and becomes instrumental in a money laundering operation led by the prison warden Samuel Norton (Bob Gunton). William Sadler, Clancy Brown, Gil Bellows, and James Whitmore appear in supporting roles.
+        <br>
+        <br>
+        <a href="https://www.mediafire.com/file/wfqtt03ovmvlgo0/The_Shawshank_Redemption_CrunchyCrack.mp4/file" target="_blank">
+            <button class="btn" >Dowonload The Shawshank Redemption</button>
+        </a>
+    </dialog>
+</body>
+</html>

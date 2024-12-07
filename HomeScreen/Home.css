@@ -1,0 +1,28 @@
+@keyframes intro {
+    from {
+        transform: translateX(1000px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+.void{
+    animation: intro 2.5s;
+}
+.logo {
+    animation-name: intro;
+    animation-duration: 1s;
+}
+.greeting {
+    animation-name: intro;
+    animation-duration: 1.5s;
+}
+.cover {
+    animation: intro 2s;
+    border: solid black;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+    background-color: beige;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./certain Css/dialog.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js"></script>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/619/619044.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrunchyCrack</title>
+</head>
+<body>
+    <p style="text-align: center;">
+        <img src="https://cdn-icons-png.flaticon.com/128/619/619044.png" alt="logo" style="margin-top: 20px;">
+        <p id="textPopUp" style="font-size: xx-large; text-align: center; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bolder;">
+            Let's get to know eachother, shall we ?
+            What Should we Call YOU ?
+            <br>
+            <br>
+            <input type="text" placeholder="Your Name Here Please." id="NameIp" class="Input">
+
+            <button class="SubmitBtn" onclick="submitName()">
+                Submit !
+            </button>
+            <p id="textPopUp2" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bolder; font-size: large; text-align: center; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bolder;">
+                Think Of it Wisely, you won't be able to change it !
+            </p>
+            
+        </p>
+        
+    </p>
+    <dialog id="confirming" class="dialog">
+        <p style="text-align: center;">
+            Well Hello ! If you'd like to change names, or dont really like this one, click this button !
+            <br>
+            <button class="SubmitBtn" oncl>I prefer Changing.</button>
+            <br>
+            But if you Like to stay with , then go on and press this one ! 
+            <br>
+            <button class="SubmitBtn" onclick="SetUsername()">I like this one</button>
+        </p>
+    </dialog>
+</body>
+</html>
