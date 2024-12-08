@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         location.href = "../index.html";
     }
 
-    document.getElementById("greetings").innerHTML = `Hello ${localStorage.getItem("UserName")}, How are You today? The Hall of Free-Movies! Download as MUCH as you WANT, It's free! 99.999% ADS free!`;
+    document.getElementById("greetings").innerHTML = `Hello ${localStorage.getItem("UserName")} !`;
 });
 
 function setDarkMode(isDark) {
@@ -22,9 +22,14 @@ function setDarkMode(isDark) {
         document.querySelectorAll("dialog").forEach(dialog => {
             dialog.style.backgroundColor = "rgb(70, 63, 63)";
         });
+        document.getElementById("body").style.backgroundImage = "url('../Images/Backgrounds/backgroundDark.jpg')";
         let dialogs = document.getElementsByClassName("dialog");
         for (let dialog of dialogs) {
             dialog.style.color = "white";
+        }
+        let covers = document.getElementsByClassName("cover");
+        for (let cover of covers) {
+            cover.style.backgroundColor = "gray";
         }
     } else {
         localStorage.setItem("DarkMode", "False");
@@ -33,10 +38,12 @@ function setDarkMode(isDark) {
         document.querySelectorAll("dialog").forEach(dialog => {
             dialog.style.backgroundColor = "white";
         });
-        let dialogs = document.getElementsByClassName("dialog");
-        for (let dialog of dialogs) {
-            dialog.style.color = "black";
+        document.getElementById("body").style.backgroundImage = "url('../Images/Backgrounds/backgroundLight.jpg')";
+        let covers = document.getElementsByClassName("cover");
+        for (let cover of covers) {
+            cover.style.backgroundColor = "white";
         }
+        
     }
 }
 
@@ -47,7 +54,6 @@ function darkMode() {
         setDarkMode(true);
     }
 }
-
 
 
 
